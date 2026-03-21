@@ -1,0 +1,136 @@
+openapi: 3.1.0
+info:
+  title: Charter Communications Spectrum Enterprise API
+  description: >-
+    The Spectrum Enterprise Open API provides enterprise clients the ability to
+    integrate their systems with Spectrum Enterprise portal features including
+    service ticketing and carrier serviceability.
+  version: 1.0.0
+  contact:
+    name: Spectrum Enterprise
+    url: https://enterprise.spectrum.com/
+servers:
+  - url: https://enterprise.spectrum.com/api
+    description: Production
+paths:
+  /tickets:
+    get:
+      operationId: getTickets
+      summary: Get Service Tickets
+      description: Retrieve a list of service tickets.
+      tags:
+        - Tickets
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TicketList'
+    post:
+      operationId: createTicket
+      summary: Create Service Ticket
+      description: Create a new service ticket.
+      tags:
+        - Tickets
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TicketRequest'
+      responses:
+        '201':
+          description: Ticket created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Ticket'
+  /tickets/{ticketId}:
+    get:
+      operationId: getTicketById
+      summary: Get Ticket by ID
+      description: Retrieve a specific service ticket.
+      tags:
+        - Tickets
+      parameters:
+        - name: ticketId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Ticket'
+  /serviceability:
+    get:
+      operationId: checkServiceability
+      summary: Check Serviceability
+      description: Check carrier serviceability for a location.
+      tags:
+        - Serviceability
+      parameters:
+        - name: address
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServiceabilityResult'
+tags:
+  - name: Tickets
+    description: Service ticket operations
+  - name: Serviceability
+    description: Carrier serviceability operations
+components:
+  schemas:
+    Ticket:
+      type: object
+      properties:
+        id:
+          type: string
+        subject:
+          type: string
+        status:
+          type: string
+        priority:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+    TicketList:
+      type: object
+      properties:
+        tickets:
+          type: array
+          items:
+            $ref: '#/components/schemas/Ticket'
+    TicketRequest:
+      type: object
+      properties:
+        subject:
+          type: string
+        description:
+          type: string
+        priority:
+          type: string
+    ServiceabilityResult:
+      type: object
+      properties:
+        address:
+          type: string
+        serviceable:
+          type: boolean
+        availableServices:
+          type: array
+          items:
+            type: string
