@@ -1,0 +1,84 @@
+openapi: 3.1.0
+info:
+  title: Charter Communications Bryte IQ API
+  description: >-
+    Bryte IQ is a Network-as-a-Service (NaaS) API platform launched by Charter
+    Communications and CableLabs, providing secure API access to network
+    capabilities based on the CAMARA project.
+  version: 1.0.0
+  contact:
+    name: Charter Communications
+    url: https://corporate.charter.com/
+servers:
+  - url: https://api.charter.com
+    description: Production
+paths:
+  /network/devices:
+    get:
+      operationId: getConnectedDevices
+      summary: Get Connected Devices
+      description: Retrieve a list of connected devices on the network.
+      tags:
+        - Devices
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConnectedDeviceList'
+  /network/status:
+    get:
+      operationId: getNetworkStatus
+      summary: Get Network Status
+      description: Retrieve current network status and health.
+      tags:
+        - Network
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NetworkStatus'
+tags:
+  - name: Devices
+    description: Connected device operations
+  - name: Network
+    description: Network status operations
+components:
+  schemas:
+    ConnectedDevice:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        type:
+          type: string
+        status:
+          type: string
+        ipAddress:
+          type: string
+    ConnectedDeviceList:
+      type: object
+      properties:
+        devices:
+          type: array
+          items:
+            $ref: '#/components/schemas/ConnectedDevice'
+    NetworkStatus:
+      type: object
+      properties:
+        status:
+          type: string
+        uptime:
+          type: number
+        bandwidth:
+          type: object
+          properties:
+            download:
+              type: number
+            upload:
+              type: number
