@@ -1,5 +1,6 @@
 aid: charter-communications
-url: https://raw.githubusercontent.com/api-evangelist/charter-communications/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/charter-communications/refs/heads/main/apis.yml
 apis:
   - aid: charter-communications:spectrum-enterprise-api
     name: Charter Communications Spectrum Enterprise API
@@ -8,7 +9,8 @@ apis:
       - Enterprise
       - Networking
       - Ticketing
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: 
+      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://enterprise.spectrum.com/api
     humanURL: https://enterprise.spectrum.com/
     properties:
@@ -28,11 +30,14 @@ apis:
       - NaaS
       - Telecommunications
       - CAMARA
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: 
+      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.charter.com
-    humanURL: https://corporate.charter.com/newsroom/charter-and-cablelabs-launch-bryte-iq-network-as-a-service-platform
+    humanURL: 
+      https://corporate.charter.com/newsroom/charter-and-cablelabs-launch-bryte-iq-network-as-a-service-platform
     properties:
-      - url: https://corporate.charter.com/newsroom/charter-and-cablelabs-launch-bryte-iq-network-as-a-service-platform
+      - url: 
+          https://corporate.charter.com/newsroom/charter-and-cablelabs-launch-bryte-iq-network-as-a-service-platform
         type: Documentation
       - url: openapi/charter-communications-bryte-iq-api-openapi.yml
         type: OpenAPI
@@ -41,3 +46,6 @@ apis:
       Communications in collaboration with CableLabs. It provides secure,
       privacy-friendly access for developers based on the Linux Foundation CAMARA
       project, enabling visibility into connected devices and network capabilities.
+description: >-
+  Charter Communications is a leading broadband connectivity company and cable operator
+  serving residential and business customers under the Spectrum brand.
