@@ -87,10 +87,10 @@ paths:
               schema:
                 $ref: '#/components/schemas/ServiceabilityResult'
 tags:
-  - name: Tickets
-    description: Service ticket operations
   - name: Serviceability
     description: Carrier serviceability operations
+  - name: Tickets
+    description: Service ticket operations
 components:
   schemas:
     Ticket:
