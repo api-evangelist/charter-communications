@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://enterprise.spectrum.com/schemas/ticket.json",
+  "title": "Spectrum Enterprise Service Ticket",
+  "type": "object",
+  "required": ["ticketId", "subject", "status"],
+  "properties": {
+    "ticketId": { "type": "string" },
+    "subject": { "type": "string" },
+    "description": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["new", "open", "in-progress", "pending", "resolved", "closed"]
+    },
+    "priority": {
+      "type": "string",
+      "enum": ["low", "normal", "high", "critical"]
+    },
+    "accountId": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

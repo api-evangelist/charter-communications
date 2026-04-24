@@ -1,0 +1,70 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "spectrum": "https://enterprise.spectrum.com/schemas/",
+    "bryteiq": "https://api.charter.com/schemas/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+
+    "Ticket": {
+      "@id": "spectrum:Ticket",
+      "@context": {
+        "ticketId": "spectrum:ticketId",
+        "subject": "schema:about",
+        "description": "schema:description",
+        "status": "spectrum:status",
+        "priority": "spectrum:priority",
+        "createdAt": {
+          "@id": "dcterms:created",
+          "@type": "xsd:dateTime"
+        },
+        "updatedAt": {
+          "@id": "dcterms:modified",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+
+    "Serviceability": {
+      "@id": "spectrum:Serviceability",
+      "@context": {
+        "address": "schema:address",
+        "isServiceable": {
+          "@id": "spectrum:isServiceable",
+          "@type": "xsd:boolean"
+        },
+        "availableProducts": "spectrum:availableProducts"
+      }
+    },
+
+    "Device": {
+      "@id": "bryteiq:Device",
+      "@context": {
+        "deviceId": "bryteiq:deviceId",
+        "deviceType": "bryteiq:deviceType",
+        "ipAddress": "bryteiq:ipAddress",
+        "lastSeen": {
+          "@id": "bryteiq:lastSeen",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+
+    "NetworkSession": {
+      "@id": "bryteiq:NetworkSession",
+      "@context": {
+        "sessionId": "bryteiq:sessionId",
+        "phoneNumber": "schema:telephone",
+        "startTime": {
+          "@id": "bryteiq:startTime",
+          "@type": "xsd:dateTime"
+        },
+        "endTime": {
+          "@id": "bryteiq:endTime",
+          "@type": "xsd:dateTime"
+        }
+      }
+    }
+  }
+}

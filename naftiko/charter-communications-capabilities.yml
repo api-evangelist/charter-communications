@@ -1,0 +1,65 @@
+name: charter-communications-capabilities
+description: >-
+  Naftiko sandbox capabilities for Charter Communications APIs covering the
+  Spectrum Enterprise service ticketing and serviceability lookups, plus the
+  Bryte IQ Network-as-a-Service capabilities for connected device visibility.
+provider: charter-communications
+version: '1.0'
+capabilities:
+  - id: spectrum.tickets.list
+    name: List service tickets
+    description: List Spectrum Enterprise service tickets for the authenticated account.
+    operationId: getTickets
+    inputs: []
+    outputs:
+      - name: tickets
+        type: array
+    tags: [enterprise, ticketing]
+  - id: spectrum.tickets.create
+    name: Create a service ticket
+    description: Create a new Spectrum Enterprise service ticket.
+    operationId: createTicket
+    inputs:
+      - name: ticket
+        type: object
+        required: true
+    outputs:
+      - name: ticket
+        type: object
+    tags: [enterprise, ticketing]
+  - id: spectrum.serviceability.check
+    name: Check carrier serviceability
+    description: Look up Spectrum Enterprise carrier serviceability for an address.
+    operationId: checkServiceability
+    inputs:
+      - name: address
+        type: object
+        required: true
+    outputs:
+      - name: serviceability
+        type: object
+    tags: [enterprise, serviceability]
+  - id: bryteiq.devices.list
+    name: List connected devices
+    description: Retrieve devices connected to a subscriber's network.
+    operationId: listDevices
+    inputs:
+      - name: subscriberId
+        type: string
+        required: true
+    outputs:
+      - name: devices
+        type: array
+    tags: [naas, camara, devices]
+  - id: bryteiq.networkInsights.get
+    name: Get network insights
+    description: Retrieve CAMARA-aligned network insights such as signal quality and bandwidth metrics.
+    operationId: getNetworkInsights
+    inputs:
+      - name: subscriberId
+        type: string
+        required: true
+    outputs:
+      - name: insights
+        type: object
+    tags: [naas, camara, insights]
