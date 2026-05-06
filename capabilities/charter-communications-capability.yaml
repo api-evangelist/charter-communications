@@ -1,0 +1,92 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Charter Communications Bryte IQ API
+  description: Bryte IQ is a Network-as-a-Service (NaaS) API platform launched by Charter Communications and CableLabs, providing
+    secure API access to network capabilities based on the CAMARA project.
+  tags:
+  - Charter
+  - Communications
+  - API
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: charter-communications
+    baseUri: https://api.charter.com
+    description: Charter Communications Bryte IQ API HTTP API.
+    resources:
+    - name: network-devices
+      path: /network/devices
+      operations:
+      - name: getconnecteddevices
+        method: GET
+        description: Get Connected Devices
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: network-status
+      path: /network/status
+      operations:
+      - name: getnetworkstatus
+        method: GET
+        description: Get Network Status
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: charter-communications-rest
+    description: REST adapter for Charter Communications Bryte IQ API.
+    resources:
+    - path: /network/devices
+      name: getconnecteddevices
+      operations:
+      - method: GET
+        name: getconnecteddevices
+        description: Get Connected Devices
+        call: charter-communications.getconnecteddevices
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /network/status
+      name: getnetworkstatus
+      operations:
+      - method: GET
+        name: getnetworkstatus
+        description: Get Network Status
+        call: charter-communications.getnetworkstatus
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: charter-communications-mcp
+    transport: http
+    description: MCP adapter for Charter Communications Bryte IQ API for AI agent use.
+    tools:
+    - name: getconnecteddevices
+      description: Get Connected Devices
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: charter-communications.getconnecteddevices
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getnetworkstatus
+      description: Get Network Status
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: charter-communications.getnetworkstatus
+      outputParameters:
+      - type: object
+        mapping: $.
