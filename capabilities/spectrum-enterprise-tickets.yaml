@@ -1,0 +1,143 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Charter Communications Spectrum Enterprise API — Tickets
+  description: 'Charter Communications Spectrum Enterprise API — Tickets. 3 operations. Lead operation: Get Service Tickets.
+    Self-contained Naftiko capability covering one Charter Communications business surface.'
+  tags:
+  - Charter Communications
+  - Tickets
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    CHARTER_COMMUNICATIONS_API_KEY: CHARTER_COMMUNICATIONS_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: spectrum-enterprise-tickets
+    baseUri: https://enterprise.spectrum.com/api
+    description: Charter Communications Spectrum Enterprise API — Tickets business capability. Self-contained, no shared references.
+    resources:
+    - name: tickets
+      path: /tickets
+      operations:
+      - name: gettickets
+        method: GET
+        description: Get Service Tickets
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createticket
+        method: POST
+        description: Create Service Ticket
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: tickets-ticketId
+      path: /tickets/{ticketId}
+      operations:
+      - name: getticketbyid
+        method: GET
+        description: Get Ticket by ID
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: ticketId
+          in: path
+          type: string
+          required: true
+  exposes:
+  - type: rest
+    namespace: spectrum-enterprise-tickets-rest
+    port: 8080
+    description: REST adapter for Charter Communications Spectrum Enterprise API — Tickets. One Spectral-compliant resource
+      per consumed operation, prefixed with /v1.
+    resources:
+    - path: /v1/tickets
+      name: tickets
+      description: REST surface for tickets.
+      operations:
+      - method: GET
+        name: gettickets
+        description: Get Service Tickets
+        call: spectrum-enterprise-tickets.gettickets
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: createticket
+        description: Create Service Ticket
+        call: spectrum-enterprise-tickets.createticket
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/tickets/{ticketid}
+      name: tickets-ticketid
+      description: REST surface for tickets-ticketId.
+      operations:
+      - method: GET
+        name: getticketbyid
+        description: Get Ticket by ID
+        call: spectrum-enterprise-tickets.getticketbyid
+        with:
+          ticketId: rest.ticketId
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: spectrum-enterprise-tickets-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Charter Communications Spectrum Enterprise API — Tickets. One tool per consumed operation,
+      routed inline through this capability's consumes block.
+    tools:
+    - name: get-service-tickets
+      description: Get Service Tickets
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: spectrum-enterprise-tickets.gettickets
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-service-ticket
+      description: Create Service Ticket
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: spectrum-enterprise-tickets.createticket
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-ticket-id
+      description: Get Ticket by ID
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: spectrum-enterprise-tickets.getticketbyid
+      with:
+        ticketId: tools.ticketId
+      outputParameters:
+      - type: object
+        mapping: $.

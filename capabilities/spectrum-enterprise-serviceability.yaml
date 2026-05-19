@@ -1,0 +1,77 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Charter Communications Spectrum Enterprise API — Serviceability
+  description: 'Charter Communications Spectrum Enterprise API — Serviceability. 1 operations. Lead operation: Check Serviceability.
+    Self-contained Naftiko capability covering one Charter Communications business surface.'
+  tags:
+  - Charter Communications
+  - Serviceability
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    CHARTER_COMMUNICATIONS_API_KEY: CHARTER_COMMUNICATIONS_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: spectrum-enterprise-serviceability
+    baseUri: https://enterprise.spectrum.com/api
+    description: Charter Communications Spectrum Enterprise API — Serviceability business capability. Self-contained, no shared
+      references.
+    resources:
+    - name: serviceability
+      path: /serviceability
+      operations:
+      - name: checkserviceability
+        method: GET
+        description: Check Serviceability
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: address
+          in: query
+          type: string
+          required: true
+  exposes:
+  - type: rest
+    namespace: spectrum-enterprise-serviceability-rest
+    port: 8080
+    description: REST adapter for Charter Communications Spectrum Enterprise API — Serviceability. One Spectral-compliant
+      resource per consumed operation, prefixed with /v1.
+    resources:
+    - path: /v1/serviceability
+      name: serviceability
+      description: REST surface for serviceability.
+      operations:
+      - method: GET
+        name: checkserviceability
+        description: Check Serviceability
+        call: spectrum-enterprise-serviceability.checkserviceability
+        with:
+          address: rest.address
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: spectrum-enterprise-serviceability-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Charter Communications Spectrum Enterprise API — Serviceability. One tool per consumed operation,
+      routed inline through this capability's consumes block.
+    tools:
+    - name: check-serviceability
+      description: Check Serviceability
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: spectrum-enterprise-serviceability.checkserviceability
+      with:
+        address: tools.address
+      outputParameters:
+      - type: object
+        mapping: $.
