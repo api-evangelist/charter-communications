@@ -1,0 +1,374 @@
+{
+  "item": [
+    {
+      "id": "f85e8497-8163-470b-a797-042e9870ddb0",
+      "name": "Serviceability",
+      "description": {
+        "content": "Carrier serviceability operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5f3a25c1-ac00-45ee-924f-0cc35e09165a",
+          "name": "Check Serviceability",
+          "request": {
+            "name": "Check Serviceability",
+            "description": {
+              "content": "Check carrier serviceability for a location.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "serviceability"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "address",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8295d78f-8a7e-4a96-8945-43389d27383a",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "serviceability"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "address",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"address\": \"string\",\n  \"serviceable\": true,\n  \"availableServices\": [\n    \"string\",\n    \"string\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "d88d9c15-b79f-41dd-81d9-0e32c43f94e2",
+      "name": "Tickets",
+      "description": {
+        "content": "Service ticket operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "2d4e01ac-9a2e-461b-9f0d-4bff610f06ee",
+          "name": "Get Service Tickets",
+          "request": {
+            "name": "Get Service Tickets",
+            "description": {
+              "content": "Retrieve a list of service tickets.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "tickets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "339a40eb-7dab-4be4-9c2e-d5ec5f9b3c72",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tickets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"tickets\": [\n    {\n      \"id\": \"string\",\n      \"subject\": \"string\",\n      \"status\": \"string\",\n      \"priority\": \"string\",\n      \"createdAt\": \"2005-03-22T08:56:23.455Z\"\n    },\n    {\n      \"id\": \"string\",\n      \"subject\": \"string\",\n      \"status\": \"string\",\n      \"priority\": \"string\",\n      \"createdAt\": \"1993-01-23T22:45:47.355Z\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2acf14e0-a347-452b-89ed-40c18ed18c87",
+          "name": "Create Service Ticket",
+          "request": {
+            "name": "Create Service Ticket",
+            "description": {
+              "content": "Create a new service ticket.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "tickets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"subject\": \"<string>\",\n  \"description\": \"<string>\",\n  \"priority\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "676df034-54e3-4a5c-8bca-6935b533dd9d",
+              "name": "Ticket created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tickets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"subject\": \"<string>\",\n  \"description\": \"<string>\",\n  \"priority\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"subject\": \"string\",\n  \"status\": \"string\",\n  \"priority\": \"string\",\n  \"createdAt\": \"2014-11-29T17:27:09.916Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "db7b5c57-0b52-4f54-a185-50ca80aed461",
+          "name": "Get Ticket by ID",
+          "request": {
+            "name": "Get Ticket by ID",
+            "description": {
+              "content": "Retrieve a specific service ticket.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "tickets",
+                ":ticketId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "ticketId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bbdede30-5b88-43fc-b894-cd6fad8590c6",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tickets",
+                    ":ticketId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "ticketId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"subject\": \"string\",\n  \"status\": \"string\",\n  \"priority\": \"string\",\n  \"createdAt\": \"2014-11-29T17:27:09.916Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://enterprise.spectrum.com/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "8ed2201e-557e-4968-a399-be4543ae171b",
+    "name": "Charter Communications Spectrum Enterprise API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Spectrum Enterprise Open API provides enterprise clients the ability to integrate their systems with Spectrum Enterprise portal features including service ticketing and carrier serviceability.\n\nContact Support:\n Name: Spectrum Enterprise",
+      "type": "text/plain"
+    }
+  }
+}

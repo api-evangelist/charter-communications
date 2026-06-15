@@ -1,0 +1,48 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Charter Communications Bryte IQ API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Devices",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Connected Devices",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.charter.com/network/devices"
+          },
+          "docs": "Retrieve a list of connected devices on the network."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Network",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Network Status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.charter.com/network/status"
+          },
+          "docs": "Retrieve current network status and health."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

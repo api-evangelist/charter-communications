@@ -1,0 +1,88 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Charter Communications Spectrum Enterprise API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Tickets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Service Tickets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://enterprise.spectrum.com/api/tickets"
+          },
+          "docs": "Retrieve a list of service tickets."
+        },
+        {
+          "info": {
+            "name": "Create Service Ticket",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://enterprise.spectrum.com/api/tickets",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a new service ticket."
+        },
+        {
+          "info": {
+            "name": "Get Ticket by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://enterprise.spectrum.com/api/tickets/:ticketId",
+            "params": [
+              {
+                "name": "ticketId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a specific service ticket."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Serviceability",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Check Serviceability",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://enterprise.spectrum.com/api/serviceability",
+            "params": [
+              {
+                "name": "address",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Check carrier serviceability for a location."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

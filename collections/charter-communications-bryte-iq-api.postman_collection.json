@@ -1,0 +1,187 @@
+{
+  "item": [
+    {
+      "id": "8e69af22-2b18-44b5-ab4d-a6f19fa3e65d",
+      "name": "Devices",
+      "description": {
+        "content": "Connected device operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "214d0a98-ff9c-41a6-99b7-1501e34483a9",
+          "name": "Get Connected Devices",
+          "request": {
+            "name": "Get Connected Devices",
+            "description": {
+              "content": "Retrieve a list of connected devices on the network.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "network",
+                "devices"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cc475cf5-062e-4ce5-ab03-5540be73ffdc",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "network",
+                    "devices"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"devices\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"string\",\n      \"status\": \"string\",\n      \"ipAddress\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"string\",\n      \"status\": \"string\",\n      \"ipAddress\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "3f4f87b5-5cc5-4c12-8be8-1c4aac909035",
+      "name": "Network",
+      "description": {
+        "content": "Network status operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "fe999832-f049-4077-8246-dcd4f3b2f728",
+          "name": "Get Network Status",
+          "request": {
+            "name": "Get Network Status",
+            "description": {
+              "content": "Retrieve current network status and health.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "network",
+                "status"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d218fdd1-8c35-4f4a-877f-fa9436353d9b",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "network",
+                    "status"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"string\",\n  \"uptime\": 2670.051710769399,\n  \"bandwidth\": {\n    \"download\": 6820.412951847513,\n    \"upload\": 1627.5555684718256\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.charter.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "df64ff7e-29ae-4596-b4d8-785d0c499428",
+    "name": "Charter Communications Bryte IQ API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Bryte IQ is a Network-as-a-Service (NaaS) API platform launched by Charter Communications and CableLabs, providing secure API access to network capabilities based on the CAMARA project.\n\nContact Support:\n Name: Charter Communications",
+      "type": "text/plain"
+    }
+  }
+}
