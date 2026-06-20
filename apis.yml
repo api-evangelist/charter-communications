@@ -6,7 +6,7 @@ description: >-
   residential and business customers, and exposes developer APIs through the Spectrum Enterprise portal for service
   ticketing and carrier serviceability, and through the Bryte IQ Network-as-a-Service platform built on the Linux
   Foundation CAMARA project.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/charter-communications/refs/heads/main/apis.yml
 type: Index
 access: 3rd-Party
@@ -32,7 +32,7 @@ apis:
       The Spectrum Enterprise Open API exposes REST endpoints that let enterprise clients integrate their systems with
       Spectrum Enterprise portal features including service ticket management and carrier serviceability lookups. The
       API uses OAuth 2.0 authentication.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://enterprise.spectrum.com/
     baseURL: https://enterprise.spectrum.com/api
     tags:
@@ -53,7 +53,7 @@ apis:
       Bryte IQ is a Network-as-a-Service (NaaS) API platform from Charter Communications and CableLabs that provides
       developers with secure, privacy-friendly access to connected device and network capabilities. It is built on the
       Linux Foundation CAMARA project.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://corporate.charter.com/newsroom/charter-and-cablelabs-launch-bryte-iq-network-as-a-service-platform
     baseURL: https://api.charter.com
     tags:
