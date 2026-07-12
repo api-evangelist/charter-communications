@@ -69,6 +69,8 @@ apis:
       - type: CAMARA
         url: https://camaraproject.org/
 common:
+  - type: DomainSecurity
+    url: security/charter-communications-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/charter-communications
   - type: Website
