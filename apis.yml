@@ -69,6 +69,8 @@ apis:
       - type: CAMARA
         url: https://camaraproject.org/
 common:
+  - type: AgenticAccess
+    url: agentic-access/charter-communications-agentic-access.yml
   - type: DomainSecurity
     url: security/charter-communications-domain-security.yml
   - type: LinkedIn
