@@ -1,0 +1,45 @@
+openapi: 3.1.0
+info:
+  title: Charter Communications Bryte IQ Devices Network API
+  description: Bryte IQ is a Network-as-a-Service (NaaS) API platform launched by Charter Communications and CableLabs, providing secure API access to network capabilities based on the CAMARA project.
+  version: 1.0.0
+  contact:
+    name: Charter Communications
+    url: https://corporate.charter.com/
+servers:
+- url: https://api.charter.com
+  description: Production
+tags:
+- name: Network
+  description: Network status operations
+paths:
+  /network/status:
+    get:
+      operationId: getNetworkStatus
+      summary: Get Network Status
+      description: Retrieve current network status and health.
+      tags:
+      - Network
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NetworkStatus'
+components:
+  schemas:
+    NetworkStatus:
+      type: object
+      properties:
+        status:
+          type: string
+        uptime:
+          type: number
+        bandwidth:
+          type: object
+          properties:
+            download:
+              type: number
+            upload:
+              type: number

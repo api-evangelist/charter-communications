@@ -1,17 +1,17 @@
 openapi: 3.1.0
 info:
-  title: Charter Communications Spectrum Enterprise API
-  description: >-
-    The Spectrum Enterprise Open API provides enterprise clients the ability to
-    integrate their systems with Spectrum Enterprise portal features including
-    service ticketing and carrier serviceability.
+  title: Charter Communications Bryte IQ Devices Tickets API
+  description: Bryte IQ is a Network-as-a-Service (NaaS) API platform launched by Charter Communications and CableLabs, providing secure API access to network capabilities based on the CAMARA project.
   version: 1.0.0
   contact:
-    name: Spectrum Enterprise
-    url: https://enterprise.spectrum.com/
+    name: Charter Communications
+    url: https://corporate.charter.com/
 servers:
-  - url: https://enterprise.spectrum.com/api
-    description: Production
+- url: https://api.charter.com
+  description: Production
+tags:
+- name: Tickets
+  description: Service ticket operations
 paths:
   /tickets:
     get:
@@ -19,7 +19,7 @@ paths:
       summary: Get Service Tickets
       description: Retrieve a list of service tickets.
       tags:
-        - Tickets
+      - Tickets
       responses:
         '200':
           description: Successful response
@@ -32,7 +32,7 @@ paths:
       summary: Create Service Ticket
       description: Create a new service ticket.
       tags:
-        - Tickets
+      - Tickets
       requestBody:
         required: true
         content:
@@ -52,13 +52,13 @@ paths:
       summary: Get Ticket by ID
       description: Retrieve a specific service ticket.
       tags:
-        - Tickets
+      - Tickets
       parameters:
-        - name: ticketId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: ticketId
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -66,31 +66,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Ticket'
-  /serviceability:
-    get:
-      operationId: checkServiceability
-      summary: Check Serviceability
-      description: Check carrier serviceability for a location.
-      tags:
-        - Serviceability
-      parameters:
-        - name: address
-          in: query
-          required: true
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ServiceabilityResult'
-tags:
-  - name: Serviceability
-    description: Carrier serviceability operations
-  - name: Tickets
-    description: Service ticket operations
 components:
   schemas:
     Ticket:
@@ -107,13 +82,6 @@ components:
         createdAt:
           type: string
           format: date-time
-    TicketList:
-      type: object
-      properties:
-        tickets:
-          type: array
-          items:
-            $ref: '#/components/schemas/Ticket'
     TicketRequest:
       type: object
       properties:
@@ -123,14 +91,10 @@ components:
           type: string
         priority:
           type: string
-    ServiceabilityResult:
+    TicketList:
       type: object
       properties:
-        address:
-          type: string
-        serviceable:
-          type: boolean
-        availableServices:
+        tickets:
           type: array
           items:
-            type: string
+            $ref: '#/components/schemas/Ticket'
