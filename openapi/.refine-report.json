@@ -1,0 +1,20 @@
+{
+  "provider": "charter-communications",
+  "sources": [
+    "charter-communications-devices-api-openapi.yml",
+    "charter-communications-network-api-openapi.yml",
+    "charter-communications-serviceability-api-openapi.yml",
+    "charter-communications-tickets-api-openapi.yml"
+  ],
+  "outputs": [
+    "charter-communications-devices-api-openapi.yml",
+    "charter-communications-network-api-openapi.yml",
+    "charter-communications-serviceability-api-openapi.yml",
+    "charter-communications-tickets-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
