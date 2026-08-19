@@ -1,0 +1,104 @@
+{
+  "item": [
+    {
+      "id": "8e263af5-d060-47fa-9c10-518c3f330804",
+      "name": "Devices",
+      "description": {
+        "content": "Connected device operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "faccb87b-8530-4e75-8157-c133623234d2",
+          "name": "Get Connected Devices",
+          "request": {
+            "name": "Get Connected Devices",
+            "description": {
+              "content": "Retrieve a list of connected devices on the network.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "network",
+                "devices"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "834de29a-b516-45d2-a833-b7326ef90e6e",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "network",
+                    "devices"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"devices\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"string\",\n      \"status\": \"string\",\n      \"ipAddress\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"string\",\n      \"status\": \"string\",\n      \"ipAddress\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.charter.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "92a6279f-f29f-408e-a60c-904a800e9b4c",
+    "name": "Charter Communications Bryte IQ Devices API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Bryte IQ is a Network-as-a-Service (NaaS) API platform launched by Charter Communications and CableLabs, providing secure API access to network capabilities based on the CAMARA project.\n\nContact Support:\n Name: Charter Communications",
+      "type": "text/plain"
+    }
+  }
+}

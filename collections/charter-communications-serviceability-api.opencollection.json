@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Charter Communications Bryte IQ Devices Serviceability API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Serviceability",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Check Serviceability",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.charter.com/serviceability",
+            "params": [
+              {
+                "name": "address",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Check carrier serviceability for a location."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

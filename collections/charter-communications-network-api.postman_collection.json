@@ -1,0 +1,104 @@
+{
+  "item": [
+    {
+      "id": "e7cc64af-08f2-4418-8793-e7ff3a9737a2",
+      "name": "Network",
+      "description": {
+        "content": "Network status operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "60755ea2-98fd-4529-8b81-29a16aa737f3",
+          "name": "Get Network Status",
+          "request": {
+            "name": "Get Network Status",
+            "description": {
+              "content": "Retrieve current network status and health.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "network",
+                "status"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b68fc8ba-4f81-4d49-bf8b-34b357d92c1a",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "network",
+                    "status"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"string\",\n  \"uptime\": 5918.57919657246,\n  \"bandwidth\": {\n    \"download\": 1039.3683232211547,\n    \"upload\": 1710.9043053372163\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.charter.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "a4573f9f-21be-49a8-9094-5ce541bdaabc",
+    "name": "Charter Communications Bryte IQ Devices Network API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Bryte IQ is a Network-as-a-Service (NaaS) API platform launched by Charter Communications and CableLabs, providing secure API access to network capabilities based on the CAMARA project.\n\nContact Support:\n Name: Charter Communications",
+      "type": "text/plain"
+    }
+  }
+}

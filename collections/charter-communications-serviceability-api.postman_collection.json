@@ -1,0 +1,114 @@
+{
+  "item": [
+    {
+      "id": "071723cf-e239-44b3-a6d2-25ff1341b5a2",
+      "name": "Serviceability",
+      "description": {
+        "content": "Carrier serviceability operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3cf6a09f-498f-43ba-8748-fcf28c018a81",
+          "name": "Check Serviceability",
+          "request": {
+            "name": "Check Serviceability",
+            "description": {
+              "content": "Check carrier serviceability for a location.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "serviceability"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "address",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "75dfcb3d-fb20-4c90-bd2c-a8b4536168af",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "serviceability"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "address",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"address\": \"string\",\n  \"serviceable\": true,\n  \"availableServices\": [\n    \"string\",\n    \"string\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.charter.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "18ddc714-5968-4394-a1a8-4d57d77b88ea",
+    "name": "Charter Communications Bryte IQ Devices Serviceability API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Bryte IQ is a Network-as-a-Service (NaaS) API platform launched by Charter Communications and CableLabs, providing secure API access to network capabilities based on the CAMARA project.\n\nContact Support:\n Name: Charter Communications",
+      "type": "text/plain"
+    }
+  }
+}
