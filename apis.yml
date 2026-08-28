@@ -6,6 +6,18 @@ description: >-
   residential and business customers, and exposes developer APIs through the Spectrum Enterprise portal for service
   ticketing and carrier serviceability, and through the Bryte IQ Network-as-a-Service platform built on the Linux
   Foundation CAMARA project.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: enterprise
   onboarding: unknown
