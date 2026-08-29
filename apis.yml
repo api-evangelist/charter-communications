@@ -127,6 +127,9 @@ apis:
   - type: CAMARA
     url: https://camaraproject.org/
 common:
+  - type: CapabilityMap
+    url: capabilities/charter-communications-capability-edges.yml
+    name: Charter Communications Business Capability Map
   - type: AgenticAccess
     url: agentic-access/charter-communications-agentic-access.yml
   - type: DomainSecurity
