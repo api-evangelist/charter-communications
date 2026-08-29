@@ -1,10 +1,8 @@
 {
   "provider": "charter-communications",
   "sources": [
-    "charter-communications-devices-api-openapi.yml",
-    "charter-communications-network-api-openapi.yml",
-    "charter-communications-serviceability-api-openapi.yml",
-    "charter-communications-tickets-api-openapi.yml"
+    "_original/charter-communications-bryte-iq-api-openapi.yml",
+    "_original/charter-communications-spectrum-enterprise-api-openapi.yml"
   ],
   "outputs": [
     "charter-communications-devices-api-openapi.yml",
@@ -15,6 +13,15 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (2 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "charter-communications-bryte-iq-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "charter-communications-spectrum-enterprise-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0"
+  ],
+  "skipped": [
+    "charter-communications-devices-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "charter-communications-network-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "charter-communications-serviceability-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "charter-communications-tickets-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

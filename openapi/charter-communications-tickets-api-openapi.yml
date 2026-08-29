@@ -1,13 +1,13 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Charter Communications Bryte IQ Devices Tickets API
-  description: Bryte IQ is a Network-as-a-Service (NaaS) API platform launched by Charter Communications and CableLabs, providing secure API access to network capabilities based on the CAMARA project.
+  title: Charter Communications Spectrum Enterprise Tickets API
+  description: The Spectrum Enterprise Open API provides enterprise clients the ability to integrate their systems with Spectrum Enterprise portal features including service ticketing and carrier serviceability.
   version: 1.0.0
   contact:
-    name: Charter Communications
-    url: https://corporate.charter.com/
+    name: Spectrum Enterprise
+    url: https://enterprise.spectrum.com/
 servers:
-- url: https://api.charter.com
+- url: https://enterprise.spectrum.com/api
   description: Production
 tags:
 - name: Tickets
@@ -68,6 +68,13 @@ paths:
                 $ref: '#/components/schemas/Ticket'
 components:
   schemas:
+    TicketList:
+      type: object
+      properties:
+        tickets:
+          type: array
+          items:
+            $ref: '#/components/schemas/Ticket'
     Ticket:
       type: object
       properties:
@@ -91,10 +98,3 @@ components:
           type: string
         priority:
           type: string
-    TicketList:
-      type: object
-      properties:
-        tickets:
-          type: array
-          items:
-            $ref: '#/components/schemas/Ticket'
