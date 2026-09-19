@@ -75,6 +75,8 @@ apis:
   humanURL: https://enterprise.spectrum.com/
   baseURL: https://enterprise.spectrum.com/api
   tags:
+  - Networks
+  tags_raw:
   - Network
   properties:
   - type: OpenAPI
