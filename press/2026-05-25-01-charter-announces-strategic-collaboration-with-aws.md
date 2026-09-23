@@ -1,7 +1,9 @@
 ---
 title: Charter Announces Strategic Collaboration With AWS
 url: https://corporate.charter.com/newsroom/charter-strategic-collaboration-with-amazon-web-services
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Charter Communications" press release artificial intelligence'
 position: 1
 source: serpapi-google

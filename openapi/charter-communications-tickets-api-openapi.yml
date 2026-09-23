@@ -68,6 +68,15 @@ paths:
                 $ref: '#/components/schemas/Ticket'
 components:
   schemas:
+    TicketRequest:
+      type: object
+      properties:
+        subject:
+          type: string
+        description:
+          type: string
+        priority:
+          type: string
     TicketList:
       type: object
       properties:
@@ -89,12 +98,3 @@ components:
         createdAt:
           type: string
           format: date-time
-    TicketRequest:
-      type: object
-      properties:
-        subject:
-          type: string
-        description:
-          type: string
-        priority:
-          type: string

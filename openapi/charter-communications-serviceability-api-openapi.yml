@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Charter Communications Spectrum Enterprise Serviceability API
+  title: Charter Communications Spectrum Enterprise Serviceability…
   description: The Spectrum Enterprise Open API provides enterprise clients the ability to integrate their systems with Spectrum Enterprise portal features including service ticketing and carrier serviceability.
   version: 1.0.0
   contact:

@@ -1,7 +1,9 @@
 ---
 title: Charter Communications Launches Spectrum Voice ID ...
 url: https://corporate.charter.com/newsroom/charter-communications-launches-spectrum-voice-id-accelerates-ai-use-to-enhance-customer-experience
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Charter Communications" press release artificial intelligence'
 position: 2
 source: serpapi-google
