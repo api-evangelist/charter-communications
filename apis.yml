@@ -115,6 +115,8 @@ apis:
   humanURL: https://enterprise.spectrum.com/
   baseURL: https://enterprise.spectrum.com/api
   tags:
+  - Ticketing
+  tags_raw:
   - Tickets
   properties:
   - type: OpenAPI
