@@ -29,13 +29,6 @@ paths:
                 $ref: '#/components/schemas/ConnectedDeviceList'
 components:
   schemas:
-    ConnectedDeviceList:
-      type: object
-      properties:
-        devices:
-          type: array
-          items:
-            $ref: '#/components/schemas/ConnectedDevice'
     ConnectedDevice:
       type: object
       properties:
@@ -49,3 +42,10 @@ components:
           type: string
         ipAddress:
           type: string
+    ConnectedDeviceList:
+      type: object
+      properties:
+        devices:
+          type: array
+          items:
+            $ref: '#/components/schemas/ConnectedDevice'
