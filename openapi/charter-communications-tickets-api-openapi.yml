@@ -77,6 +77,13 @@ components:
           type: string
         priority:
           type: string
+    TicketList:
+      type: object
+      properties:
+        tickets:
+          type: array
+          items:
+            $ref: '#/components/schemas/Ticket'
     Ticket:
       type: object
       properties:
@@ -91,10 +98,3 @@ components:
         createdAt:
           type: string
           format: date-time
-    TicketList:
-      type: object
-      properties:
-        tickets:
-          type: array
-          items:
-            $ref: '#/components/schemas/Ticket'
