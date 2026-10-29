@@ -1,4 +1,4 @@
-# Charter Communications (charter-communications)
+# Charter Communications
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,94 +66,143 @@
 
 Charter Communications, Inc. is a leading broadband connectivity company and cable operator serving more than 32 million customers in 41 states through its Spectrum brand. Charter offers internet, TV, mobile, and voice services to residential and business customers, and exposes developer APIs through the Spectrum Enterprise portal for service ticketing and carrier serviceability, and through the Bryte IQ Network-as-a-Service platform built on the Linux Foundation CAMARA project.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/charter-communications/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/charter-communications/refs/heads/main/apis.yml)
+**Areas:** Broadband · Cable · CAMARA · Enterprise · Network as a Service · NaaS · Spectrum · Telecommunications · Ticketing · Fortune 500
 
-## Scope
+## Charter Communications on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Charter Communications is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/charter-communications/](https://apis.io/providers/charter-communications/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (4)
 
-- Broadband
-- Cable
-- CAMARA
-- Enterprise
-- Network as a Service
-- NaaS
-- Spectrum
-- Telecommunications
-- Ticketing
+- [Charter Communications Devices API](https://apis.io/apis/charter-communications/charter-communications-devices-api/) — Connected device operations
+- [Charter Communications Network API](https://apis.io/apis/charter-communications/charter-communications-network-api/) — Network status operations
+- [Charter Communications Serviceability API](https://apis.io/apis/charter-communications/charter-communications-serviceability-api/) — Carrier serviceability operations
+- [Charter Communications Tickets API](https://apis.io/apis/charter-communications/charter-communications-tickets-api/) — Service ticket operations
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-21
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Charter Communications Spectrum Enterprise API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The Spectrum Enterprise Open API exposes REST endpoints that let enterprise clients integrate their systems with Spectrum Enterprise portal features including service ticket management and carrier serviceability lookups. The API uses OAuth 2.0 authentication.
+- [Charter Communications Agentic Access](https://apis.io/agentic-access/charter-communications/charter-communications-agentic-access/)
 
-- **Human URL:** [https://enterprise.spectrum.com/](https://enterprise.spectrum.com/)
-- **Base URL:** `https://enterprise.spectrum.com/api`
+#### JSON Schema (2)
 
-#### Tags
+The data models the API reads and writes.
 
-- Enterprise
-- Networking
-- Telecommunications
-- Ticketing
+- [Spectrum Enterprise Serviceability](https://apis.io/schemas/charter-communications/charter-communications-serviceability/)
+- [Spectrum Enterprise Service Ticket](https://apis.io/schemas/charter-communications/charter-communications-ticket/)
 
-#### Properties
+#### JSON-LD (1)
 
-- [Documentation](https://enterprise.spectrum.com/)
-- [OpenAPI](openapi/charter-communications-spectrum-enterprise-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/charter-communications-spectrum-enterprise-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/charter-communications-spectrum-enterprise-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Spectral Rules](spectral/charter-communications-spectral.yml) — [Spectral](https://docs.stoplight.io/docs/spectral)
+Linked-data contexts for the provider's vocabulary.
 
-### Charter Communications Bryte IQ API
+- [Charter Communications Context](https://apis.io/jsonld/charter-communications/charter-communications-context/)
 
-Bryte IQ is a Network-as-a-Service (NaaS) API platform from Charter Communications and CableLabs that provides developers with secure, privacy-friendly access to connected device and network capabilities. It is built on the Linux Foundation CAMARA project.
+#### Collections (6)
 
-- **Human URL:** [https://corporate.charter.com/newsroom/charter-and-cablelabs-launch-bryte-iq-network-as-a-service-platform](https://corporate.charter.com/newsroom/charter-and-cablelabs-launch-bryte-iq-network-as-a-service-platform)
-- **Base URL:** `https://api.charter.com`
+Postman and Open Collection request collections.
 
-#### Tags
+- [Charter Communications Bryte IQ API](https://apis.io/collections/charter-communications/open-charter-communications-bryte-iq-api/)
+- [Charter Communications Bryte IQ Devices API](https://apis.io/collections/charter-communications/open-charter-communications-devices-api/)
+- [Charter Communications Bryte IQ Devices Network API](https://apis.io/collections/charter-communications/open-charter-communications-network-api/)
+- [Charter Communications Bryte IQ Devices Serviceability API](https://apis.io/collections/charter-communications/open-charter-communications-serviceability-api/)
+- [Charter Communications Spectrum Enterprise API](https://apis.io/collections/charter-communications/open-charter-communications-spectrum-enterprise-api/)
+- [Charter Communications Bryte IQ Devices Tickets API](https://apis.io/collections/charter-communications/open-charter-communications-tickets-api/)
 
-- CAMARA
-- NaaS
-- Network as a Service
-- Telecommunications
+#### Governance rules (1)
 
-#### Properties
+Spectral rulesets for the provider's contracts.
 
-- [Documentation](https://corporate.charter.com/newsroom/charter-and-cablelabs-launch-bryte-iq-network-as-a-service-platform)
-- [OpenAPI](openapi/charter-communications-bryte-iq-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/charter-communications-bryte-iq-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/charter-communications-bryte-iq-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [C A M A R A](https://camaraproject.org/)
+- [Charter Communications — jsonschema rules](https://apis.io/rules/charter-communications/charter-communications-jsonschema-spectral-rules/)
 
-## Common Properties
+#### Security (1)
 
-- [LinkedIn](https://www.linkedin.com/company/charter-communications)
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Charter Communications Domain Security](https://apis.io/security/charter-communications/charter-communications-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Charter Communications Plans Pricing](https://apis.io/plans/charter-communications/charter-communications-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Charter Communications Rate Limits](https://apis.io/rate-limits/charter-communications/charter-communications-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Charter Communications Finops](https://apis.io/finops/charter-communications/charter-communications-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://corporate.charter.com/)
-- [Consumer Site](https://www.spectrum.com/)
-- [Enterprise Site](https://enterprise.spectrum.com/)
-- [Newsroom](https://corporate.charter.com/newsroom)
-- [Investor Relations](https://ir.charter.com/)
-- [Careers](https://jobs.spectrum.com/)
 - [Support](https://www.spectrum.net/support/)
-- [Terms of Service](https://www.spectrum.com/policies/terms-of-service)
-- [Privacy Policy](https://www.spectrum.com/policies/your-privacy-rights)
-- [JSON-LD](json-ld/charter-communications-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [JSON Schema](json-schema/charter-communications-ticket-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/charter-communications-serviceability-schema.json) — [JSON Schema](https://json-schema.org/specification)
+- [Terms of service](https://www.spectrum.com/policies/terms-of-service)
+- [Privacy policy](https://www.spectrum.com/policies/your-privacy-rights)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 22.5** — emerging · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 67.9 |
+| Contract quality | 46.6 |
+| Contract governance | 9.8 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 4.8 |
+| Access clarity | 15.8 |
+
+**Agent readiness 17.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 12.5** — Telecommunications
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/charter-communications/](https://apis.io/providers/charter-communications/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Charter Communications: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/charter-communications/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
